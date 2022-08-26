@@ -169,7 +169,7 @@ def configureReactNativePom(def pom) {
         }
     }
 }
-classpath += files(project.getConfigurations().getByName('implementation').asList())
+configurations.implementation.setCanBeResolved(true)
 afterEvaluate { project ->
     // some Gradle build hooks ref:
     // https://www.oreilly.com/library/view/gradle-beyond-the/9781449373801/ch03.html
